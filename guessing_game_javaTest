@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class TwoDigitEvenNumbers {
+
+    public static void main(String[] args) {
+        // Create an ArrayList to store numbers
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        // Add two-digit numbers (10 to 99)
+        for (int i = 10; i <= 99; i++) {
+            numbers.add(i);
+        }
+
+        // Remove odd numbers using iterator
+        Iterator<Integer> it = numbers.iterator();
+        while (it.hasNext()) {
+            int num = it.next();
+            if (num % 2 != 0) {
+                it.remove(); // Remove odd number using iterator's remove method
+            }
+        }
+
+        // Print the remaining (even) numbers
+        System.out.println("Even numbers (10-99): " + numbers);
+    }
+}
