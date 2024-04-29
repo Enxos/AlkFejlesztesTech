@@ -1,5 +1,27 @@
 package com.fcomho.futoverseny;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import java.util.Set;
+
+@Entity
+public class Verseny {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long versenyId;
+
+    private String nev;
+
+    private Double tavolsag;
+
+}
+
+/*
 @Entity
 public class Futok {
 
@@ -14,22 +36,9 @@ public class Futok {
     private String nem;
 
 }
+*/
 
-@Entity
-public class Verseny {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String nev;
-
-    private Double tavolsag;
-
-    // További attribútumok, pl. leírás, dátum
-
-}
-
+/*
 @Entity
 public class Eredmeny {
 
@@ -38,7 +47,7 @@ public class Eredmeny {
     private Long id;
 
     @ManyToOne
-    private FutoversenyEntity résztvevő;
+    private FutoEntity résztvevő;
 
     @ManyToOne
     private Verseny verseny;
@@ -46,3 +55,4 @@ public class Eredmeny {
     private Integer időeredmény; // Percekben
 
 }
+*/

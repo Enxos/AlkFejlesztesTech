@@ -9,18 +9,17 @@ import jakarta.persistence.ManyToMany;
 import java.util.Set;
 
 @Entity
-public class FutoversenyEntity {
+public class Futo
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long futoId;
 
     private String futoName;
 
-    private Long eletkor;
+    private Byte eletkor;
 
-    @ManyToMany(mappedBy = "basketProducts")
-    @JsonIgnore
-    private Set<BasketEntity> baskets;
+    private String nem;
 
 
     public Long getfutoId() {
@@ -39,19 +38,19 @@ public class FutoversenyEntity {
         this.futoName = futoName;
     }
 
-    public Long getEletkor() {
+    public Byte getEletkor() {
         return eletkor;
     }
 
-    public void setEletkor(Long eletkor) {
+    public void setEletkor(Byte eletkor) {
         this.eletkor = eletkor;
     }
 
-    public Set<BasketEntity> getBaskets() {
-        return baskets;
+    public String getnem() {
+        return nem;
     }
 
-    public void setBaskets(Set<BasketEntity> baskets) {
-        this.baskets = baskets;
+    public void setnem(String nem) {
+        this.nem = nem;
     }
 }
