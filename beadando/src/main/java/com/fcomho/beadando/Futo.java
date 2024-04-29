@@ -19,22 +19,22 @@ public class Futo
 
     private Byte eletkor;
 
-    private String nem;
+    private String gender;
 
 
-    public Long getfutoId() {
+    public Long getFutoId() {
         return futoId;
     }
 
-    public void setfutoId(Long futoId) {
+    public void setFutoId(Long futoId) {
         this.futoId = futoId;
     }
 
-    public String getfutoName() {
+    public String getFutoName() {
         return futoName;
     }
 
-    public void setfutoName(String futoName) {
+    public void setFutoName(String futoName) {
         this.futoName = futoName;
     }
 
@@ -46,11 +46,11 @@ public class Futo
         this.eletkor = eletkor;
     }
 
-    public String getnem() {
-        return nem;
+    public String getGender() {
+        return gender;
     }
 
-    public void setnem(String nem) {
-        this.nem = nem;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
