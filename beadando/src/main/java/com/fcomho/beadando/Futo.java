@@ -1,4 +1,4 @@
-package com.fcomho.futoverseny;
+package com.fcomho.beadando;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
@@ -7,9 +7,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import java.util.Set;
+import jakarta.persistence.GeneratedValue; // Import the GeneratedValue class
 
 @Entity
-public class Futo
+public class Futo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

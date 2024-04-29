@@ -1,4 +1,4 @@
-package com.fcomho.futoverseny;
+package com.fcomho.beadando;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
