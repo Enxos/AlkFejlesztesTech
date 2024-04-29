@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.futoverseny.beadando;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class BeadandoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(BeadandoApplication.class, args);
 	}
 
 }
