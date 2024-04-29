@@ -1,10 +1,10 @@
-package com.futoverseny.beadando;
+package com.fcomho.futoverseny;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BeadandoApplicationTests {
+class futoversenyApplicationTests {
 
 	@Test
 	void contextLoads() {
