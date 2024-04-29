@@ -36,21 +36,50 @@ public class DataLoader implements CommandLineRunner {
         futo1.setFutoName(futoName:"Kovács Béla");
         futo1.setEletkor(32);
         futo1.setGender(gender:"férfi");
+        FutoRepository.save(futo1);
 
+        Futo futo2 = new Futo();
+        futo2.setFutoName(futoName:"Nagy Anna");
+        futo2.setEletkor(28);
+        futo2.setGender(gender:"nő");
+        FutoRepository.save(futo2);
+        
+        Futo futo3 = new Futo();
+        futo3.setFutoName(futoName:"Szabó Péter");
+        futo3.setEletkor(40);
+        futo3.setGender(gender:"férfi");
+        FutoRepository.save(futo3);
+        
+        Futo futo4 = new Futo();
+        futo4.setFutoName(futoName:"Kovács Béla");
+        futo4.setEletkor(25);
+        futo4.setGender(gender:"nő");
+        FutoRepository.save(futo4);
+        
+        Verseny verseny1 = new Verseny();
+        verseny1.setNev(nev:"Budapesti Félmaraton");
+        verseny1.setTavolsag(tavolsag:21.1);
+        VersenyRepository.save(verseny1);
 
+        Verseny verseny2 = new Verseny();
+        verseny2.setNev(nev:"10 km-es futás");
+        verseny2.setTavolsag(tavolsag:10);
+        VersenyRepository.save(verseny2);
 
-
-
+/*
         com.fcomho.beadando.Futo futo1 = new Futo("Kovács Béla", 32, "férfi");
         com.fcomho.beadando.Futo futo2 = new Futo("Nagy Anna", 28, "nő");
         com.fcomho.beadando.Futo futo3 = new Futo("Szabó Péter", 40, "férfi");
         com.fcomho.beadando.Futo futo4 = new Futo("Tóth Zsuzsa", 25, "nő");
         
         futóRepository.saveAll(Arrays.asList(futo1, futo2, futo3, futo4));
-
+ */
         // Versenyek generálása
+
+/*
         Verseny verseny1 = new Verseny("Félmaraton", 21.1);
         Verseny verseny2 = new Verseny("10 km-es futás", 10.0);
+*/
 
         versenyRepository.saveAll(Arrays.asList(verseny1, verseny2));
 

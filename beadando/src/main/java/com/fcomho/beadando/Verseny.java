@@ -19,6 +19,29 @@ public class Verseny {
 
     private Double tavolsag;
 
+    public Long getVersenyId() {
+        return futoId;
+    }
+
+    public void setVersenyId(Long versenyId) {
+        this.versenyId = versenyId;
+    }
+
+    public String getNev() {
+        return nev;
+    }
+
+    public void setNev(String nev) {
+        this.nev = nev;
+    }
+
+    public Double getTavolsag() {
+        return tavolsag;
+    }
+
+    public void setTavolsag(Double tavolsag) {
+        this.tavolsag = tavolsag;
+    }
 }
 
 /*
