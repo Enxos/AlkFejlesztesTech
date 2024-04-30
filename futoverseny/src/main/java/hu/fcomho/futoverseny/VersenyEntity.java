@@ -13,7 +13,42 @@ import java.util.Set;
 public class VersenyEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Assuming auto-increment for id
+    private Integer id;
+
+    private String versenyNeve;
+
+    private String tavolsag;
+
+    @OneToMany(mappedBy = "verseny") // Verseny has many Eredmeny instances
+    private List<Eredmeny> eredmenyek;
+
+    public Verseny() {
+    }
+
+    public Verseny(Integer id, String versenyNeve, String tavolsag) {
+        this.id = id;
+        this.versenyNeve = versenyNeve;
+        this.tavolsag = tavolsag;
+        this.eredmenyek = new ArrayList<>();
+    }
+
+    // Getters and setters omitted for brevity (same as before)
+
+    public List<Eredmeny> getEredmenyek() {
+        return eredmenyek;
+    }
+
+    public void setEredmenyek(List<Eredmeny> eredmenyek) {
+        this.eredmenyek = eredmenyek;
+    }
+}
+
+/*
+public class VersenyEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long versenyId;
 
     @ManyToMany
@@ -60,3 +95,4 @@ public class VersenyEntity {
         this.versenyEredmenyek = versenyEredmenyek;
     }
 }
+*/
