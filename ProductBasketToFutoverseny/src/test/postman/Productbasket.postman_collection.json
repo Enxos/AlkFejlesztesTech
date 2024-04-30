@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "edadfa74-937c-4491-90a4-2a396d484250",
-		"name": "Productbasket",
+		"name": "Productverseny",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9701363"
 	},
@@ -27,12 +27,12 @@
 			"response": []
 		},
 		{
-			"name": "getProductBasketPrice",
+			"name": "getProductVersenyPrice",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/getBasketPrice/2",
+					"raw": "http://localhost:8080/api/getVersenyPrice/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,7 +40,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"getBasketPrice",
+						"getVersenyPrice",
 						"2"
 					]
 				}
@@ -48,12 +48,12 @@
 			"response": []
 		},
 		{
-			"name": "getBasketProducts",
+			"name": "getVersenyProducts",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/getBasketProducts/2",
+					"raw": "http://localhost:8080/api/getVersenyProducts/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -61,7 +61,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"getBasketProducts",
+						"getVersenyProducts",
 						"2"
 					]
 				}
@@ -98,7 +98,7 @@
 			"response": []
 		},
 		{
-			"name": "addProductToBasket",
+			"name": "addProductToVerseny",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -112,7 +112,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/addProductToBasket/1/3",
+					"raw": "http://localhost:8080/api/addProductToVerseny/1/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -120,7 +120,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"addProductToBasket",
+						"addProductToVerseny",
 						"1",
 						"3"
 					]
@@ -129,7 +129,7 @@
 			"response": []
 		},
 		{
-			"name": "updateBasketName",
+			"name": "updateVersenyName",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -143,7 +143,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/updateBasketName/1",
+					"raw": "http://localhost:8080/api/updateVersenyName/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -151,7 +151,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"updateBasketName",
+						"updateVersenyName",
 						"1"
 					]
 				}

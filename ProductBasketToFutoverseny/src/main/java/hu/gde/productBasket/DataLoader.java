@@ -10,7 +10,7 @@ import java.util.Set;
 public class DataLoader implements CommandLineRunner {
 
     @Autowired
-    private BasketRepository basketRepository;
+    private VersenyRepository versenyRepository;
 
     @Autowired
     private ProductRepository productRepository;
@@ -37,20 +37,20 @@ public class DataLoader implements CommandLineRunner {
         product4.setPrice(81);
         productRepository.save(product4);
 
-        BasketEntity basket1 = new BasketEntity();
-        Set<ProductEntity> basket1Products = new HashSet<>();
-        basket1Products.add(product1);
-        basket1Products.add(product2);
-        basket1.setBasketProducts(basket1Products);
-        basket1.setBasketName("Budapesti Félmaraton");
-        basketRepository.save(basket1);
+        VersenyEntity verseny1 = new VersenyEntity();
+        Set<ProductEntity> verseny1Products = new HashSet<>();
+        verseny1Products.add(product1);
+        verseny1Products.add(product2);
+        verseny1.setVersenyProducts(verseny1Products);
+        verseny1.setVersenyName("Budapesti Félmaraton");
+        versenyRepository.save(verseny1);
 
-        BasketEntity basket2 = new BasketEntity();
-        Set<ProductEntity> basket2Products = new HashSet<>();
-        basket2Products.add(product3);
-        basket2Products.add(product4);
-        basket2.setBasketProducts(basket2Products);
-        basket2.setBasketName("10Km-es futás");
-        basketRepository.save(basket2);
+        VersenyEntity verseny2 = new VersenyEntity();
+        Set<ProductEntity> verseny2Products = new HashSet<>();
+        verseny2Products.add(product3);
+        verseny2Products.add(product4);
+        verseny2.setVersenyProducts(verseny2Products);
+        verseny2.setVersenyName("10Km-es futás");
+        versenyRepository.save(verseny2);
     }
 }

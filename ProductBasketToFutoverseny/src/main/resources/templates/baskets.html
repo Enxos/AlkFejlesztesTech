@@ -16,21 +16,21 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="basket : ${baskets}">
-      <td th:text="${basket.basketId}"></td>
-      <td th:text="${basket.basketName}"></td>
-      <!-- <td th:text="${basket.versenyDistance}"></td> -->
+    <tr th:each="verseny : ${versenyek}">
+      <td th:text="${verseny.versenyId}"></td>
+      <td th:text="${verseny.versenyName}"></td>
+      <!-- <td th:text="${verseny.versenyDistance}"></td> -->
       <td>
-        <a th:href="@{/basket/{id}(id=${basket.basketId})}" class="btn btn-primary">Eredmények</a>
+        <a th:href="@{/verseny/{id}(id=${verseny.versenyId})}" class="btn btn-primary">Eredmények</a>
       </td>
     </tr>
     </tbody>
   </table>
 
-  <form action="/createBasket" method="post">
+  <form action="/createVerseny" method="post">
     <div class="form-group">
-      <label for="basketName">Új verseny létrehozása:</label>
-      <input type="text" class="form-control" id="basketName" name="name" placeholder="Írd be ide az új verseny nevét.">
+      <label for="versenyName">Új verseny létrehozása:</label>
+      <input type="text" class="form-control" id="versenyName" name="name" placeholder="Írd be ide az új verseny nevét.">
     </div>
     <button type="submit" class="btn btn-success">Verseny létrehozása</button>
   </form>

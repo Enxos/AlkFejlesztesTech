@@ -18,9 +18,9 @@ public class ProductEntity {
 
     private Integer price;
 
-    @ManyToMany(mappedBy = "basketProducts")
+    @ManyToMany(mappedBy = "versenyProducts")
     @JsonIgnore
-    private Set<BasketEntity> baskets;
+    private Set<VersenyEntity> versenyek;
 
 
     public Long getProductId() {
@@ -47,11 +47,11 @@ public class ProductEntity {
         this.price = price;
     }
 
-    public Set<BasketEntity> getBaskets() {
-        return baskets;
+    public Set<VersenyEntity> getVersenyek() {
+        return versenyek;
     }
 
-    public void setBaskets(Set<BasketEntity> baskets) {
-        this.baskets = baskets;
+    public void setVersenyek(Set<VersenyEntity> versenyek) {
+        this.versenyek = versenyek;
     }
 }
