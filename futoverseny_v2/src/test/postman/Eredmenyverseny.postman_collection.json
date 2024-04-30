@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "edadfa74-937c-4491-90a4-2a396d484250",
+		"name": "Eredmenyverseny",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9701363"
+	},
+    "item": [
+		{
+			"name": "getEredmeny",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getEredmenyek",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getEredmenyek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEredmenyVersenyIdo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getVersenyIdo/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getVersenyIdo",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVersenyEredmenyek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getVersenyEredmenyek/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getVersenyEredmenyek",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEredmeny",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"eredmenyName\": \"Orange\",\n  \"ido\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/addEredmeny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"addEredmeny"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEredmenyToVerseny",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"eredmenyName\": \"Orange\",\n  \"ido\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/addEredmenyToVerseny/1/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"addEredmenyToVerseny",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateVersenyName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Delta",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/updateVersenyName/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"updateVersenyName",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
