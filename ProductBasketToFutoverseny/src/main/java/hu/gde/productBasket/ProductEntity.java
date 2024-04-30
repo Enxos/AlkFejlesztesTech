@@ -16,7 +16,7 @@ public class ProductEntity {
 
     private String productName;
 
-    private Long price;
+    private Integer price;
 
     @ManyToMany(mappedBy = "basketProducts")
     @JsonIgnore
@@ -39,11 +39,11 @@ public class ProductEntity {
         this.productName = productName;
     }
 
-    public Long getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

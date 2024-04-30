@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Basket Details</title>
+  <title>Verseny részletek</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
-  <h1>Basket Products</h1>
+  <h1>Verseny eredmények</h1>
   <table class="table table-striped">
     <thead>
     <tr>
-      <th>Name</th>
-      <th>Price</th>
+      <!-- <th>Helyezés</th> -->
+      <th>Versenyző neve</th>
+      <th>Versenyző ideje percben</th>
     </tr>
     </thead>
     <tbody>
@@ -23,7 +24,7 @@
   </table>
 
   <!-- Back Button -->
-  <a href="/baskets" class="btn btn-info">Back to Baskets</a>
+  <a href="/baskets" class="btn btn-info">Vissza a versenyek listájához.</a>
 </div>
 </body>
 </html>

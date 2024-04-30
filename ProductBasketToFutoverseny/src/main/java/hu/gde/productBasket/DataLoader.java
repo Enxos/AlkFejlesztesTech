@@ -18,23 +18,23 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         ProductEntity product1 = new ProductEntity();
-        product1.setProductName("Alma");
-        product1.setPrice(10L);
+        product1.setProductName("Első helyezett Futó");
+        product1.setPrice(65);
         productRepository.save(product1);
 
         ProductEntity product2 = new ProductEntity();
-        product2.setProductName("Körte");
-        product2.setPrice(15L);
+        product2.setProductName("Második helyezett Futó");
+        product2.setPrice(75);
         productRepository.save(product2);
 
         ProductEntity product3 = new ProductEntity();
-        product3.setProductName("Banán");
-        product3.setPrice(8L);
+        product3.setProductName("Harmadik helyezett Futó");
+        product3.setPrice(76);
         productRepository.save(product3);
 
         ProductEntity product4 = new ProductEntity();
-        product4.setProductName("Répa");
-        product4.setPrice(20L);
+        product4.setProductName("Negyedik helyezett Futó");
+        product4.setPrice(81);
         productRepository.save(product4);
 
         BasketEntity basket1 = new BasketEntity();
@@ -42,7 +42,7 @@ public class DataLoader implements CommandLineRunner {
         basket1Products.add(product1);
         basket1Products.add(product2);
         basket1.setBasketProducts(basket1Products);
-        basket1.setBasketName("Basket alfa");
+        basket1.setBasketName("Budapesti Félmaraton");
         basketRepository.save(basket1);
 
         BasketEntity basket2 = new BasketEntity();
@@ -50,7 +50,7 @@ public class DataLoader implements CommandLineRunner {
         basket2Products.add(product3);
         basket2Products.add(product4);
         basket2.setBasketProducts(basket2Products);
-        basket2.setBasketName("Basket beta");
+        basket2.setBasketName("10Km-es futás");
         basketRepository.save(basket2);
     }
 }
