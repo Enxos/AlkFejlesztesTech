@@ -32,12 +32,12 @@ public class EredmenyVersenyFrontendController {
     }
 
     @GetMapping("/verseny/{id}")
-    public String viewVersenyDetails(@PathVariable Long id, Model model) {
+    public String vieweredmenyek(@PathVariable Long id, Model model) {
         VersenyEntity verseny = versenyRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Verseny not found with ID: " + id));
 
         model.addAttribute("eredmenyek", verseny.getVersenyEredmenyek());
-        return "versenyDetails";
+        return "eredmenyek";
     }
 
 }
