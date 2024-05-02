@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
@@ -36,7 +38,14 @@ public class EredmenyVersenyFrontendController {
         VersenyEntity verseny = versenyRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Verseny not found with ID: " + id));
 
-        model.addAttribute("eredmenyek", verseny.getVersenyEredmenyek());
+        // Get the list of eredmeny entities
+        List<EredmenyEntity> eredmenyek = new ArrayList<>(verseny.getVersenyEredmenyek());
+        
+        // Sort the list based on the 'ido' property in ascending order
+        eredmenyek.sort(Comparator.comparingInt(EredmenyEntity::getIdo));
+
+        // Add the sorted list to the model
+        model.addAttribute("eredmenyek", eredmenyek);
         return "eredmenyek";
     }
 
