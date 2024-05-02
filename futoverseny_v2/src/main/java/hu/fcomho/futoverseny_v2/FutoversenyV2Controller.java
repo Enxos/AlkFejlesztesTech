@@ -36,9 +36,7 @@ public class FutoversenyV2Controller {
         VersenyEntity verseny = versenyRepository.findById(id).orElseThrow(() -> new RuntimeException("Verseny nem talalhato!"));
         return new ArrayList<>(verseny.getVersenyEredmenyek());
     }
-//
-//   Update stuff from here...
-// 
+
     @PutMapping("/updateVersenyName/{versenyId}")
     public VersenyEntity updateVersenyName(@PathVariable Long versenyId, @RequestBody String name) {
         VersenyEntity verseny = versenyRepository.findById(versenyId)
@@ -46,6 +44,7 @@ public class FutoversenyV2Controller {
         verseny.setVersenyName(name);
         return versenyRepository.save(verseny);
     }
+
     @PostMapping("/addEredmenyToVerseny/{versenyId}/{eredmenyId}")
     public VersenyEntity addEredmenyToVerseny(@PathVariable Long versenyId, @PathVariable Long eredmenyId) {
         VersenyEntity verseny = versenyRepository.findById(versenyId)
@@ -58,11 +57,11 @@ public class FutoversenyV2Controller {
     }
 
     @GetMapping("/getVersenyIdo/{versenyId}")
-    public Long getVersenyIdo(@PathVariable Long versenyId) {
+    public Integer getVersenyIdo(@PathVariable Long versenyId) {
         VersenyEntity verseny = versenyRepository.findById(versenyId)
                 .orElseThrow(() -> new RuntimeException("Verseny not found with ID: " + versenyId));
 
-        long totalIdo = 0;
+        Integer totalIdo = 0;
 
         for (EredmenyEntity eredmeny : verseny.getVersenyEredmenyek()) {
             totalIdo += eredmeny.getIdo();
@@ -72,9 +71,3 @@ public class FutoversenyV2Controller {
     }
 
 }
-
-
-
-
-// import org.springframework.web.bind.annotation.PostMapping;
-// import org.springframework.web.bind.annotation.RequestBody;

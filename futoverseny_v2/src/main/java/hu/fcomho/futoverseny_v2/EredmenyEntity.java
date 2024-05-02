@@ -16,7 +16,7 @@ public class EredmenyEntity {
 
     private String eredmenyName;
 
-    private Long ido;
+    private Integer ido;
 
     @ManyToMany(mappedBy = "versenyEredmenyek")
     @JsonIgnore
@@ -39,11 +39,11 @@ public class EredmenyEntity {
         this.eredmenyName = eredmenyName;
     }
 
-    public Long getIdo() {
+    public Integer getIdo() {
         return ido;
     }
 
-    public void setIdo(Long ido) {
+    public void setIdo(Integer ido) {
         this.ido = ido;
     }
 

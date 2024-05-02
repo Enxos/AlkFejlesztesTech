@@ -18,39 +18,25 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        // Versenyek generálása
-        
-        /*
-        VersenyEntity verseny1 = new VersenyEntity();
-        verseny1.setVersenyName("Budapest Félmaraton");
-        verseny1.setVersenyId(1L);
-        versenyRepository.save(verseny1);
-
-        VersenyEntity verseny2 = new VersenyEntity();
-        verseny2.setVersenyName("10 km-es futás");
-        verseny2.setVersenyId(2L);
-        versenyRepository.save(verseny2);
-         */
-
         // Eredmények generálása
         EredmenyEntity eredmeny1 = new EredmenyEntity();
         eredmeny1.setEredmenyName("eredmeny1");
-        eredmeny1.setIdo(1L);
+        eredmeny1.setIdo(1);
         eredmenyRepository.save(eredmeny1);
 
         EredmenyEntity eredmeny2 = new EredmenyEntity();
         eredmeny2.setEredmenyName("eredmeny2");
-        eredmeny2.setIdo(2L);
+        eredmeny2.setIdo(2);
         eredmenyRepository.save(eredmeny2);
 
         EredmenyEntity eredmeny3 = new EredmenyEntity();
         eredmeny3.setEredmenyName("eredmeny3");
-        eredmeny3.setIdo(3L);
+        eredmeny3.setIdo(3);
         eredmenyRepository.save(eredmeny3);
 
         EredmenyEntity eredmeny4 = new EredmenyEntity();
         eredmeny4.setEredmenyName("eredmeny4");
-        eredmeny4.setIdo(4L);
+        eredmeny4.setIdo(4);
         eredmenyRepository.save(eredmeny4);
 
         // Futók generálása
