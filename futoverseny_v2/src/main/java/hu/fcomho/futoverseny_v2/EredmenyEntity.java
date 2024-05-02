@@ -5,7 +5,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+
 import java.util.Set;
 
 @Entity
@@ -14,11 +17,14 @@ public class EredmenyEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long eredmenyId;
 
-    private String eredmenyName;
+    // private String futoIdja;
+    @ManyToOne
+    @JoinColumn(name = "futo_id", referencedColumnName = "futoId")
+    private FutoEntity futoIdja;
 
     private Integer ido;
 
-    @ManyToMany(mappedBy = "versenyEredmenyek")
+    @ManyToMany (mappedBy = "versenyEredmenyek")
     @JsonIgnore
     private Set<VersenyEntity> versenyek;
 
@@ -31,12 +37,12 @@ public class EredmenyEntity {
         this.eredmenyId = eredmenyId;
     }
 
-    public String getEredmenyName() {
-        return eredmenyName;
+    public FutoEntity getFutoIdja() {
+        return futoIdja;
     }
 
-    public void setEredmenyName(String eredmenyName) {
-        this.eredmenyName = eredmenyName;
+    public void setFutoIdja(FutoEntity futoIdja) {
+        this.futoIdja = futoIdja;
     }
 
     public Integer getIdo() {

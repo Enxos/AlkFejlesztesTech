@@ -10,16 +10,16 @@
         <thead>
         <tr>
             <th>Azonosító</th>
-            <th>Név</th>
-            <!-- <th>Táv</th> -->
-            <th>Action</th>
+            <th>Verseny Neve</th>
+            <th>Táv</th>
+            <th>Eredmények</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="verseny : ${versenyek}">
             <td th:text="${verseny.versenyId}"></td>
             <td th:text="${verseny.versenyName}"></td>
-            <!-- <td th:text="${verseny.tav}"></td> -->
+            <td th:text="${verseny.distance}"></td>
             <td>
                 <a th:href="@{/verseny/{id}(id=${verseny.versenyId})}" class="btn btn-primary">Részletek</a>
             </td>
@@ -29,8 +29,13 @@
 
     <form action="/createVerseny" method="post">
         <div class="form-group">
-            <label for="versenyName">Verseny Name:</label>
-            <input type="text" class="form-control" id="versenyName" name="name" placeholder="Ird be a verseny nevet">
+
+            <label for="versenyName" style="font-size: 18px; font-weight: bold;">Új verseny létrehozása:</label>
+            <br>
+            <label for="versenyName">Neve:</label>
+            <input type="text" class="form-control" id="versenyName" name="name" placeholder="Írd be a verseny nevét">
+            <label for="distance">Távolsága:</label>
+            <input type="text" class="form-control" id="distance" name="distance" placeholder="Ird be a távot">
         </div>
         <button type="submit" class="btn btn-success">Verseny létrehozása</button>
     </form>

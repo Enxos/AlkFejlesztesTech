@@ -26,9 +26,10 @@ public class EredmenyVersenyFrontendController {
     }
 
     @PostMapping("/createVerseny")
-    public String createVerseny(@RequestParam("name") String name) {
+    public String createVerseny(@RequestParam("name") String name, @RequestParam("distance") Double distance) {
         VersenyEntity newVerseny = new VersenyEntity();
         newVerseny.setVersenyName(name);
+        newVerseny.setDistance(distance);
         versenyRepository.save(newVerseny);
         return "redirect:/versenyek";
     }

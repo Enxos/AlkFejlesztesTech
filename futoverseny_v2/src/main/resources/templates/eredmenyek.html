@@ -10,17 +10,17 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Rank</th>
-            <th>Name</th>
+            <th>Helyezés</th>
+            <th>Futó neve</th>
             <th>Időeredmény</th>
         </tr>
         </thead>
         <tbody>
         <!-- <tr th:each="eredmeny: ${eredmenyek}"> -->
         <tr th:each="eredmeny, stat : ${eredmenyek}">
-            <td th:text="${stat.count}"></td>
-            <td th:text="${eredmeny.eredmenyName}"></td>
-            <td th:text="${eredmeny.ido}"></td>
+            <td th:text="${stat.count + '.'}"></td>
+            <td th:text="${eredmeny.futoIdja != null ? eredmeny.futoIdja.futoName : 'N/A'}"></td>
+            <td th:text="${eredmeny.ido + ' perc'}"></td>
         </tr>
         </tbody>
     </table>

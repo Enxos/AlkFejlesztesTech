@@ -4,8 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.JoinColumn;
 import java.util.Set;
 
@@ -25,6 +25,8 @@ public class VersenyEntity {
 
     private String versenyName;
     
+    private Double distance; //Km
+
     public Long getVersenyId() {
         return versenyId;
     }
@@ -38,6 +40,14 @@ public class VersenyEntity {
 
     public void setVersenyName(String versenyName) {
         this.versenyName = versenyName;
+    }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
     }
 
     public Set<EredmenyEntity> getVersenyEredmenyek() {
