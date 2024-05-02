@@ -24,6 +24,7 @@ public class VersenyEntity {
     private Set<EredmenyEntity> versenyEredmenyek;
 
     private String versenyName;
+    
     public Long getVersenyId() {
         return versenyId;
     }
