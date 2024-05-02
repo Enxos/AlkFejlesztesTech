@@ -19,7 +19,7 @@
         <tr th:each="verseny : ${versenyek}">
             <td th:text="${verseny.versenyId}"></td>
             <td th:text="${verseny.versenyName}"></td>
-            <td th:text="${verseny.distance}"></td>
+            <td th:text="${verseny.distance + ' Km'}"></td>
             <td>
                 <a th:href="@{/verseny/{id}(id=${verseny.versenyId})}" class="btn btn-primary">Részletek</a>
             </td>
@@ -33,9 +33,9 @@
             <label for="versenyName" style="font-size: 18px; font-weight: bold;">Új verseny létrehozása:</label>
             <br>
             <label for="versenyName">Neve:</label>
-            <input type="text" class="form-control" id="versenyName" name="name" placeholder="Írd be a verseny nevét">
+            <input type="text" class="form-control" id="versenyName" name="name" placeholder="Írd be a verseny nevét.">
             <label for="distance">Távolsága:</label>
-            <input type="text" class="form-control" id="distance" name="distance" placeholder="Ird be a távot">
+            <input type="text" class="form-control" id="distance" name="distance" placeholder="Ird be a távot kilométerben.">
         </div>
         <button type="submit" class="btn btn-success">Verseny létrehozása</button>
     </form>

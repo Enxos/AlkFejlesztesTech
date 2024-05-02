@@ -16,8 +16,8 @@ import java.util.List;
 public class EredmenyVersenyFrontendController {
     @Autowired
     private VersenyRepository versenyRepository;
-    @Autowired
-    private EredmenyRepository eredmenyRepository;
+    // @Autowired
+    // private EredmenyRepository eredmenyRepository;
     @GetMapping("/versenyek")
     public String getAllVersenyek(Model model) {
         List<VersenyEntity> versenyek = versenyRepository.findAll();

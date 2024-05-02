@@ -21,6 +21,14 @@ public class FutoversenyV2Controller {
     @Autowired
     private VersenyRepository versenyRepository;
 
+    @Autowired
+    private FutoRepository futoRepository;
+
+    @GetMapping("/getRunners")
+    public List<FutoEntity> getRunners() {
+        return futoRepository.findAll();
+    }
+
     @GetMapping("/getEredmenyek")
     public List<EredmenyEntity> getEredmenyek() {
         return eredmenyRepository.findAll();
